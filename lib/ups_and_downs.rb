@@ -2,6 +2,7 @@ require_relative "ups_and_downs/elevator"
 
 module UpsAndDowns
   MissingParameterError = Class.new(StandardError)
+  MaximumCapacityError  = Class.new(StandardError)
 
   class ParameterValidator
     class << self
