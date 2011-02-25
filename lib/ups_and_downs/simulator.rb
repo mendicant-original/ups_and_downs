@@ -19,5 +19,9 @@ module UpsAndDowns
         self.tick += 1
       end
     end
+
+    def future_actions?
+      on_tick_actions.max_by{|k, v| k}[0] > tick
+    end
   end
 end
