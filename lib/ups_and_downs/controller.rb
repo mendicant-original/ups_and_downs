@@ -1,5 +1,3 @@
-require "pry"
-
 module UpsAndDowns
   class Controller
     def initialize(elevator)
