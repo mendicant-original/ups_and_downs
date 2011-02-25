@@ -44,6 +44,19 @@ module UpsAndDowns
       passengers.count
     end
 
+    def transfer_passenger(passenger)
+      case
+      when passenger?(passenger)
+        unload_passenger(passenger)
+        location.add_occupant(passenger)
+      when location.occupant?(passenger)
+        load_passenger(passenger)
+        location.remove_occupant(passenger)
+      else
+        raise 
+      end
+    end
+
     def load_passenger(passenger)
       raise MaximumCapacityError if full?
       passengers << passenger 
@@ -51,6 +64,10 @@ module UpsAndDowns
 
     def unload_passenger(passenger)
       passengers.delete(passenger)
+    end
+
+    def on_floor?(floor)
+      location == floor
     end
 
     def full?

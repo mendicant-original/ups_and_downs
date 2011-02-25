@@ -135,6 +135,10 @@ context "An elevator" do
     flunk
   end
 
+  test "must test occupant transfers" do
+    flunk
+  end
+
   def new_elevator(params={})
     lobby  = UpsAndDowns::Floor.new("Lobby")
     floor2 = UpsAndDowns::Floor.new("2")

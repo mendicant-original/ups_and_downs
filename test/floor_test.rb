@@ -34,6 +34,15 @@ context "A floor" do
     assert_equal 0, floor.occupant_count
   end
 
+  test "must be able to determine if a floor has a given occupant" do
+    floor = new_floor
+
+    refute floor.occupant?("Greg")
+
+    floor.add_occupant("Greg")
+    assert floor.occupant?("Greg")
+  end
+
   def new_floor
     UpsAndDowns::Floor.new("Generic Floor")
   end

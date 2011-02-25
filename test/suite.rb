@@ -1,3 +1,6 @@
 require_relative "elevator_test"
 require_relative "floor_test"
 require_relative "request_test"
+require_relative "controller_test"
+require_relative "building_test"
+require_relative "simulator_test"

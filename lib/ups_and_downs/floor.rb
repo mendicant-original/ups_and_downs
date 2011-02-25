@@ -11,6 +11,10 @@ module UpsAndDowns
       occupants.count
     end
 
+    def occupant?(occupant)
+      occupants.include?(occupant)
+    end
+
     def add_occupant(occupant)
       occupants << occupant
     end
