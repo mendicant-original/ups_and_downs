@@ -1,15 +1,13 @@
 require_relative "test_helper"
 
 context "An elevator" do
-  test "must have a capacity" do
-    elevator = UpsAndDowns::Elevator.new(capacity: 5)
-    assert_equal 5, elevator.capacity
-  end
+  test "must have a capacity and a list of floors" do
+    lobby  = UpsAndDowns::Floor.new("Lobby")
+    floor2 = UpsAndDowns::Floor.new("2")
 
-  test "must raise an error when capacity is not set" do
-    error = assert_raises(UpsAndDowns::MissingParameterError) do
-      elevator = UpsAndDowns::Elevator.new({})
-    end
+    elevator = UpsAndDowns::Elevator.new(capacity: 5, floors: [lobby, floor2])
+    assert_equal 5, elevator.capacity
+    assert_equal 2, elevator.floors.count
   end
 
   test "must start out with no passengers" do
@@ -65,8 +63,83 @@ context "An elevator" do
     end
   end
 
+  test "must default to the first floor in the floors list" do
+    lobby  = UpsAndDowns::Floor.new("Lobby")
+    floor2 = UpsAndDowns::Floor.new("2")
+
+    elevator = UpsAndDowns::Elevator.new(capacity: 5, floors: [lobby, floor2])
+
+    assert_equal lobby, elevator.location
+  end
+
+  test "must be able to be initialized with an elevator starting postion" do
+    lobby  = UpsAndDowns::Floor.new("Lobby")
+    floor2 = UpsAndDowns::Floor.new("2")
+
+    elevator = UpsAndDowns::Elevator.new(capacity: 5,
+                                      floors: [lobby, floor2],
+                                      starting_position: 1)
+
+    assert_equal floor2, elevator.location
+  end
+
+  test "must be able to move the elevator between floors" do
+    lobby  = UpsAndDowns::Floor.new("Lobby")
+    floor2 = UpsAndDowns::Floor.new("2")
+    floor3 = UpsAndDowns::Floor.new("3")
+
+    elevator = UpsAndDowns::Elevator.new(capacity: 5,
+                                         floors: [lobby, floor2, floor3])
+
+    assert_equal lobby, elevator.location
+
+    elevator.move_up
+    assert_equal floor2, elevator.location
+
+    elevator.move_up
+    assert_equal floor3, elevator.location
+
+    elevator.move_down
+    assert_equal floor2, elevator.location
+
+    elevator.move_down
+    assert_equal lobby, elevator.location
+  end
+
+  test "must be able to detect when elevator is at the bottom of the shaft" do
+    lobby  = UpsAndDowns::Floor.new("Lobby")
+    floor2 = UpsAndDowns::Floor.new("2")
+
+
+    elevator = UpsAndDowns::Elevator.new(floors: [lobby, floor2],
+                                         capacity: 5)
+
+    assert elevator.at_bottom_of_shaft?
+    refute elevator.at_top_of_shaft?
+  end
+
+  test "must be able to detect when elevator is at the top of the shaft" do
+    lobby  = UpsAndDowns::Floor.new("Lobby")
+    floor2 = UpsAndDowns::Floor.new("2")
+
+
+    elevator = UpsAndDowns::Elevator.new(floors: [lobby, floor2],
+                                         capacity: 5)
+    elevator.move_up
+
+    assert elevator.at_top_of_shaft?
+    refute elevator.at_bottom_of_shaft?
+  end
+
+  test "must test proper error raising for elevator movement" do
+    flunk
+  end
+
   def new_elevator(params={})
-    params = { capacity: 5 }.merge(params)
+    lobby  = UpsAndDowns::Floor.new("Lobby")
+    floor2 = UpsAndDowns::Floor.new("2")
+
+    params = { capacity: 5, floors: [lobby, floor2] }.merge(params)
     UpsAndDowns::Elevator.new(params)
   end
 end
