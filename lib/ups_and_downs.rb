@@ -1,4 +1,6 @@
 require_relative "ups_and_downs/elevator"
+require_relative "ups_and_downs/floor"
+require_relative "ups_and_downs/request"
 
 module UpsAndDowns
   MissingParameterError = Class.new(StandardError)

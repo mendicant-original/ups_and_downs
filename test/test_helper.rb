@@ -1,4 +1,5 @@
 require "minitest/autorun"
+require "pry"
 require_relative "../lib/ups_and_downs"
 
 # adopted from: https://gist.github.com/839034
