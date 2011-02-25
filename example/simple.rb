@@ -1,14 +1,5 @@
 require_relative "../lib/ups_and_downs"
 
-simulator   = UpsAndDowns::Simulator.new
-
-lobby_floor  = UpsAndDowns::Floor.new("Lobby")
-second_floor = UpsAndDowns::Floor.new("Floor 2")
-third_floor  = UpsAndDowns::Floor.new("Floor 3")
-
-elevator  = UpsAndDowns::Elevator.new(capacity: 2, 
-                                      floors: [lobby_floor, second_floor, third_floor])
-
 class SampleController < UpsAndDowns::Controller
   def accept_request?(request)
     requests.length < elevator.capacity
@@ -36,6 +27,15 @@ class SampleController < UpsAndDowns::Controller
     end
   end
 end
+
+simulator   = UpsAndDowns::Simulator.new
+
+lobby_floor  = UpsAndDowns::Floor.new("Lobby")
+second_floor = UpsAndDowns::Floor.new("Floor 2")
+third_floor  = UpsAndDowns::Floor.new("Floor 3")
+
+elevator  = UpsAndDowns::Elevator.new(capacity: 2, 
+                                      floors: [lobby_floor, second_floor, third_floor])
 
 controller = SampleController.new(elevator)
 building = UpsAndDowns::Building.new([controller])
