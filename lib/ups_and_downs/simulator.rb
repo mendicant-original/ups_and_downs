@@ -24,5 +24,9 @@ module UpsAndDowns
       str = "\n--------------------------------"
       str << "\nTick #{tick}"
     end
+
+    def future_actions?
+      on_tick_actions.max_by{|k, v| k}[0] > tick
+    end
   end
 end
