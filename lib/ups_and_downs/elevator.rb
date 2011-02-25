@@ -14,6 +14,15 @@ module UpsAndDowns
     attr_reader :capacity, :passengers, :floors
     attr_accessor :position
 
+    def status
+      str =  "Elevator is at: #{location.name}"
+      str << "\nPassengers: #{passengers.join(", ")}"
+      str << "\n--------------------------------"
+      str << "\nInfo for floors accessible by this elevator"
+      str << floors.map { |f| "\n#{f.name}: #{f.occupants.join(',')}" }.join
+      str << "\n--------------------------------"
+    end
+
     def location
       floors[position]
     end

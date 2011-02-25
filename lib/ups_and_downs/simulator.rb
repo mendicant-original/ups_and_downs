@@ -19,5 +19,10 @@ module UpsAndDowns
         self.tick += 1
       end
     end
+
+    def status
+      str = "\n--------------------------------"
+      str << "\nTick #{tick}"
+    end
   end
 end
