@@ -1,8 +1,48 @@
 require_relative "../lib/ups_and_downs"
 
 class OneUpOneDownController < UpsAndDowns::Controller
+  attr_accessor :direction_responsible_for, :moving_direction
+
+  def other_controller
+    building.controllers.find{|c| c != self }
+  end
+
+  def passenger_requests
+    requests.select{|r| elevator.passenger?(r.passenger) }
+  end
+
+  def non_passenger_requests
+    requests - passenger_requests
+  end
+
+  def going_my_way?(request)
+    @direction_responsible_for == request.direction
+  end
+
+  def swap_pending_requests
+    my_requests_to_swap = non_passenger_requests
+    other_requests_to_swap = other_controller.non_passenger_requests
+
+    self.requests -= my_requests_to_swap
+    other_controller.requests += my_requests_to_swap
+
+    self.requests += other_requests_to_swap
+    other_controller.requests -= other_requests_to_swap
+  end
+
   def accept_request?(request)
-    requests.length < elevator.capacity
+    return false if requests.length > elevator.capacity
+
+    return going_my_way?(request) if @direction_responsible_for
+
+    other_controller_dir = other_controller.direction_responsible_for
+    if other_controller_dir
+      @direction_responsible_for = other_controller_dir == :up ? :down : :up
+      return going_my_way?(request)
+    else
+      @direction_responsible_for = request.direction
+      return true
+    end
   end
 
   def move
@@ -15,66 +55,45 @@ class OneUpOneDownController < UpsAndDowns::Controller
 
     case
     when elevator.at_top_of_shaft?
-      @direction = :down
+      @moving_direction = :down
+      other_controller.moving_direction = :up
+      swap_pending_requests
+      @moving_direction
     when elevator.at_bottom_of_shaft?
+      if @moving_direction == :down
+        other_controller.moving_direction = :down
+        swap_pending_requests
+      end
+      @moving_direction = :up
       if requests.empty?
         :wait
       else
-        @direction = :up
+        @moving_direction
+      end
+    when @moving_direction == :down
+      if requests.find {|r| elevator.passenger?(r.passenger) }
+        if requests.find { |r| elevator.passenger?(r.passenger) &&
+                               r.drop_floor < elevator.location }
+          @moving_direction
+        else
+          @moving_direction = :up
+        end
+      else
+        @moving_direction
+      end
+    when @moving_direction == :up
+      if requests.find {|r| elevator.passenger?(r.passenger) }
+        if requests.find { |r| elevator.passenger?(r.passenger) &&
+                               r.drop_floor > elevator.location }
+          @moving_direction
+        else
+          @moving_direction = :down
+        end
+      else
+        @moving_direction
       end
     else
-      @direction
+      @moving_direction
     end
   end
 end
-
-simulator   = UpsAndDowns::Simulator.new
-
-floors  = [UpsAndDowns::Floor.new("Lobby")]
-(2..9).each do |i|
-  floors << UpsAndDowns::Floor.new("Floor #{i}")
-end
-
-express_floors = []
-[0, 2, 5, 8].each do |i|
-  express_floors << floors[i]
-end
-
-elevator  = UpsAndDowns::Elevator.new(capacity: 2,
-                                      floors: floors)
-
-express_elevator = UpsAndDowns::Elevator.new(capacity: 2,
-                                             floors: express_floors)
-
-controller = CarolSampleController.new(elevator)
-express_controller = CarolSampleController.new(express_elevator)
-
-building = UpsAndDowns::Building.new([controller, express_controller])
-
-floors[0].add_occupant "Jia"
-
-building.add_request(pickup_floor: floors[0],
-                     drop_floor: floors[1],
-                     passenger: "Jia")
-
-puts "--------------------------------"
-puts "Initial state:"
-building.controllers.each do |c|
-  puts c.elevator.status
-end
-
-simulator.run do
-  puts simulator.status
-  building.controllers.each do |c|
-    c.step
-    puts c.elevator.status
-    sleep 1
-  end
-  if building.requests.empty? &&
-       !simulator.future_actions? &&
-         !building.controllers.find{|c| !c.requests.empty?}
-    puts "DONE."
-    exit
-  end
-end
-
