@@ -11,5 +11,14 @@ module UpsAndDowns
     end
 
     attr_reader :pickup_floor, :drop_floor, :passenger
+
+    def direction
+      case
+      when (@pickup_floor < @drop_floor)
+        :up
+      when (@pickup_floor > @drop_floor)
+        :down
+      end
+    end
   end
 end
