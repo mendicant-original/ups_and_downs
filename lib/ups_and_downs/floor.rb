@@ -1,5 +1,7 @@
 module UpsAndDowns
   class Floor
+    include Comparable
+
     def initialize(name)
       @name      = name
       @occupants = []
@@ -21,6 +23,18 @@ module UpsAndDowns
 
     def remove_occupant(occupant)
       occupants.delete(occupant)
+    end
+
+    def number
+      if @name.eql?("Lobby")
+        1
+      else
+        @name.match(/Floor (\d+)/)[1].to_i
+      end
+    end
+
+    def <=>(other_floor)
+      number <=> other_floor.number
     end
   end
 end

@@ -1,0 +1,961 @@
+--------------------------------
+Initial state:
+--------------------------------
+Elevator is at: Lobby
+Passengers: 
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: Jia,Greg
+Floor 3: 
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: 
+Floor 9: 
+--------------------------------
+Elevator is at: Lobby
+Passengers: 
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: Jia,Greg
+Floor 3: 
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: 
+Floor 9: 
+
+--------------------------------
+Tick 0
+--------------------------------
+Elevator is at: Floor 2
+Passengers: 
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: Jia,Greg
+Floor 3: 
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: 
+Floor 9: 
+--------------------------------
+Elevator is at: Lobby
+Passengers: 
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: Jia,Greg
+Floor 3: 
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: 
+Floor 9: 
+
+--------------------------------
+Tick 1
+--------------------------------
+Elevator is at: Floor 2
+Passengers: Jia, Greg
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: 
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: 
+Floor 9: 
+--------------------------------
+Elevator is at: Lobby
+Passengers: 
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: 
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: 
+Floor 9: 
+
+--------------------------------
+Tick 2
+--------------------------------
+Elevator is at: Floor 3
+Passengers: Jia, Greg
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: 
+Floor 4: Samnang
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: 
+Floor 9: 
+--------------------------------
+Elevator is at: Floor 2
+Passengers: 
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: 
+Floor 4: Samnang
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: 
+Floor 9: 
+
+--------------------------------
+Tick 3
+--------------------------------
+Elevator is at: Floor 4
+Passengers: Jia, Greg
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: 
+Floor 4: Samnang
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: 
+Floor 9: 
+--------------------------------
+Elevator is at: Floor 3
+Passengers: 
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: 
+Floor 4: Samnang
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: 
+Floor 9: 
+
+--------------------------------
+Tick 4
+--------------------------------
+Elevator is at: Floor 5
+Passengers: Jia, Greg
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: 
+Floor 4: Samnang
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: 
+Floor 9: 
+--------------------------------
+Elevator is at: Floor 4
+Passengers: 
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: 
+Floor 4: Samnang
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: 
+Floor 9: 
+
+--------------------------------
+Tick 5
+--------------------------------
+Elevator is at: Floor 6
+Passengers: Jia, Greg
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: Carol
+Floor 4: Samnang
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: 
+Floor 9: 
+--------------------------------
+Elevator is at: Floor 4
+Passengers: Samnang
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: Carol
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: 
+Floor 9: 
+
+--------------------------------
+Tick 6
+--------------------------------
+Elevator is at: Floor 7
+Passengers: Jia, Greg
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: Carol
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: 
+Floor 9: 
+--------------------------------
+Elevator is at: Floor 5
+Passengers: Samnang
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: Carol
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: 
+Floor 9: 
+
+--------------------------------
+Tick 7
+--------------------------------
+Elevator is at: Floor 8
+Passengers: Jia, Greg
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: Carol
+Floor 4: Gavin
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: 
+Floor 9: 
+--------------------------------
+Elevator is at: Floor 6
+Passengers: Samnang
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: Carol
+Floor 4: Gavin
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: 
+Floor 9: 
+
+--------------------------------
+Tick 8
+--------------------------------
+Elevator is at: Floor 9
+Passengers: Jia, Greg
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: Carol
+Floor 4: Gavin
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: 
+Floor 9: 
+--------------------------------
+Elevator is at: Floor 7
+Passengers: Samnang
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: Carol
+Floor 4: Gavin
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: 
+Floor 9: 
+
+--------------------------------
+Tick 9
+--------------------------------
+Elevator is at: Floor 9
+Passengers: Greg
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: Carol
+Floor 4: Gavin
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: 
+Floor 9: Jia
+--------------------------------
+Elevator is at: Floor 8
+Passengers: Samnang
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: Carol
+Floor 4: Gavin
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: 
+Floor 9: Jia
+
+--------------------------------
+Tick 10
+--------------------------------
+Elevator is at: Floor 8
+Passengers: Greg
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: Carol
+Floor 4: Gavin
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: 
+Floor 9: Jia
+--------------------------------
+Elevator is at: Floor 8
+Passengers: 
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: Carol
+Floor 4: Gavin
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+
+--------------------------------
+Tick 11
+--------------------------------
+Elevator is at: Floor 7
+Passengers: Greg
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: Carol
+Floor 4: Gavin
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+--------------------------------
+Elevator is at: Floor 9
+Passengers: 
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: Carol
+Floor 4: Gavin
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+
+--------------------------------
+Tick 12
+--------------------------------
+Elevator is at: Floor 6
+Passengers: Greg
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: Carol
+Floor 4: Gavin
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+--------------------------------
+Elevator is at: Floor 8
+Passengers: 
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: Carol
+Floor 4: Gavin
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+
+--------------------------------
+Tick 13
+--------------------------------
+Elevator is at: Floor 5
+Passengers: Greg
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: Carol
+Floor 4: Gavin
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+--------------------------------
+Elevator is at: Floor 7
+Passengers: 
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: Carol
+Floor 4: Gavin
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+
+--------------------------------
+Tick 14
+--------------------------------
+Elevator is at: Floor 4
+Passengers: Greg
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: Carol
+Floor 4: Gavin
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+--------------------------------
+Elevator is at: Floor 6
+Passengers: 
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: Carol
+Floor 4: Gavin
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+
+--------------------------------
+Tick 15
+--------------------------------
+Elevator is at: Floor 4
+Passengers: Greg, Gavin
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: Carol
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+--------------------------------
+Elevator is at: Floor 5
+Passengers: 
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: Carol
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+
+--------------------------------
+Tick 16
+--------------------------------
+Elevator is at: Floor 3
+Passengers: Greg, Gavin
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: Carol
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+--------------------------------
+Elevator is at: Floor 4
+Passengers: 
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: Carol
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+
+--------------------------------
+Tick 17
+--------------------------------
+Elevator is at: Floor 2
+Passengers: Greg, Gavin
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: Carol
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+--------------------------------
+Elevator is at: Floor 3
+Passengers: 
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: Carol
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+
+--------------------------------
+Tick 18
+--------------------------------
+Elevator is at: Lobby
+Passengers: Greg, Gavin
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: Carol
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+--------------------------------
+Elevator is at: Floor 3
+Passengers: Carol
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: 
+Floor 2: 
+Floor 3: 
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+
+--------------------------------
+Tick 19
+--------------------------------
+Elevator is at: Lobby
+Passengers: 
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: Greg,Gavin
+Floor 2: 
+Floor 3: 
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+--------------------------------
+Elevator is at: Floor 2
+Passengers: Carol
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: Greg,Gavin
+Floor 2: 
+Floor 3: 
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+
+--------------------------------
+Tick 20
+--------------------------------
+Elevator is at: Lobby
+Passengers: 
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: Greg,Gavin
+Floor 2: 
+Floor 3: 
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+--------------------------------
+Elevator is at: Lobby
+Passengers: Carol
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: Greg,Gavin
+Floor 2: 
+Floor 3: 
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+
+--------------------------------
+Tick 21
+--------------------------------
+Elevator is at: Lobby
+Passengers: 
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: Greg,Gavin
+Floor 2: 
+Floor 3: 
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+--------------------------------
+Elevator is at: Floor 2
+Passengers: Carol
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: Greg,Gavin
+Floor 2: 
+Floor 3: 
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+
+--------------------------------
+Tick 22
+--------------------------------
+Elevator is at: Lobby
+Passengers: 
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: Greg,Gavin
+Floor 2: 
+Floor 3: 
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+--------------------------------
+Elevator is at: Floor 3
+Passengers: Carol
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: Greg,Gavin
+Floor 2: 
+Floor 3: 
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+
+--------------------------------
+Tick 23
+--------------------------------
+Elevator is at: Lobby
+Passengers: 
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: Greg,Gavin
+Floor 2: 
+Floor 3: 
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+--------------------------------
+Elevator is at: Floor 4
+Passengers: Carol
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: Greg,Gavin
+Floor 2: 
+Floor 3: 
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+
+--------------------------------
+Tick 24
+--------------------------------
+Elevator is at: Lobby
+Passengers: 
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: Greg,Gavin
+Floor 2: 
+Floor 3: 
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+--------------------------------
+Elevator is at: Floor 5
+Passengers: Carol
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: Greg,Gavin
+Floor 2: 
+Floor 3: 
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+
+--------------------------------
+Tick 25
+--------------------------------
+Elevator is at: Lobby
+Passengers: 
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: Greg,Gavin
+Floor 2: 
+Floor 3: 
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+--------------------------------
+Elevator is at: Floor 6
+Passengers: Carol
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: Greg,Gavin
+Floor 2: 
+Floor 3: 
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+
+--------------------------------
+Tick 26
+--------------------------------
+Elevator is at: Lobby
+Passengers: 
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: Greg,Gavin
+Floor 2: 
+Floor 3: 
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+--------------------------------
+Elevator is at: Floor 7
+Passengers: Carol
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: Greg,Gavin
+Floor 2: 
+Floor 3: 
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+
+--------------------------------
+Tick 27
+--------------------------------
+Elevator is at: Lobby
+Passengers: 
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: Greg,Gavin
+Floor 2: 
+Floor 3: 
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+--------------------------------
+Elevator is at: Floor 8
+Passengers: Carol
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: Greg,Gavin
+Floor 2: 
+Floor 3: 
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+
+--------------------------------
+Tick 28
+--------------------------------
+Elevator is at: Lobby
+Passengers: 
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: Greg,Gavin
+Floor 2: 
+Floor 3: 
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+--------------------------------
+Elevator is at: Floor 9
+Passengers: Carol
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: Greg,Gavin
+Floor 2: 
+Floor 3: 
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+
+--------------------------------
+Tick 29
+--------------------------------
+Elevator is at: Lobby
+Passengers: 
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: Greg,Gavin
+Floor 2: 
+Floor 3: 
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia
+--------------------------------
+Elevator is at: Floor 9
+Passengers: 
+--------------------------------
+Info for floors accessible by this elevator
+Lobby: Greg,Gavin
+Floor 2: 
+Floor 3: 
+Floor 4: 
+Floor 5: 
+Floor 6: 
+Floor 7: 
+Floor 8: Samnang
+Floor 9: Jia,Carol
+DONE.
